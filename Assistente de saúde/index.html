@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aza - assistente de saúde</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai/dist/gemini.umd.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/assistenteFavIcon.ico">
+</head>
+</head>
+
+<body>
+    <header>
+        <h1>Assistente de Saúde Virtual</h1>
+    </header>
+
+    <img id="assistent" src="img/assistenteVirtual.png" alt="Assistant">
+    <p>Olá, eu sou a Aza! Sua assistente de saúde virtual...</p>
+    <p>Experimente me fazer uma pergunta.</p>
+    <section id="sectionAsk">
+        <form id="assistantForm">
+            <input type="text" id="consulta" placeholder="Em que posso te ajudar hoje?">
+            <button type="button" id="botaoConsulta">Send</button>
+        </form>
+    </section>
+
+    <section id="resultadoConsulta">
+    </section>
+    <div id="Funcionalidades">
+        <h2>Funcionalidades</h2>
+        <p><b>Sintomas Checker: 
+            </b> O usuário poderá informar seus sintomas e o Aza fornecerá uma lista de possíveis causas, orientando sobre o
+            que fazer em cada caso.</p>
+        <p><b>Diagnóstico Diferencial: </b> Ao informar seus sintomas, o Aza poderá apresentar uma lista de doenças com alta
+            probabilidade de serem a causa da indisposição, auxiliando na decisão de procurar um médico.</p>
+        <p><b>Perguntas e Respostas: </b>A Aza responderá às dúvidas dos usuários sobre saúde de forma clara e objetiva,
+            utilizando linguagem acessível e evitando termos técnicos complexos.</p>
+            </div>
+    <hr>
+    
+    <footer>
+        <p>Desenvolvido por Tainá Leandra Dreissig</p>
+        <div style="margin-left: 620px; " class="social-icons">
+
+            <a href="https://www.instagram.com/_tainadreissig/">
+                <img height="30px" width="30px" src="img/logotipo-do-instagram.png">
+            </a>
+            <a href="https://github.com/tainadr"><img height="30px" width="30px" src="img/github.png"></a>
+            </a>
+
+            <a href="https://www.linkedin.com/in/tain%C3%A1-dreissig-159593185/">
+                <img height="30px" width="30px" src="img/logotipo-do-linkedin.png">
+            </a>
+    </footer>
+
+    <script type="importmap">
+        {
+            "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+        }
+        </script>
+
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai"
+        const chave = "AIzaSyCZ*******************"
+
+        const genAI = new GoogleGenerativeAI(chave)
+        const model = genAI.getGenerativeModel({ model: "gemini-pro" })
+
+        document.querySelector("#botaoConsulta").addEventListener("click", async () => {
+            desativarBotao();
+            const consulta = document.querySelector("#consulta").value;
+            const resultadoConsulta = document.querySelector("#resultadoConsulta");
+            try {
+                const result = await model.generateContent(consulta);
+                const response = await result.response;
+                const text = response.text();
+                const textoFormatado = text.replace(/\n/g, "<br>");
+                resultadoConsulta.innerHTML = textoFormatado;
+            } catch (error) {
+                resultadoConsulta.innerHTML = 'Problemas na consulta';
+            }
+            ativarBotao();
+        });
+
+
+        function desativarBotao() {
+            const botaoConsulta = document.querySelector("#botaoConsulta")
+            botaoConsulta.disabled = true
+            botaoConsulta.innerText = "Aguarde alguns segundos..."
+        }
+
+        function ativarBotao() {
+            const botaoConsulta = document.querySelector("#botaoConsulta")
+            botaoConsulta.disabled = false
+            botaoConsulta.innerText = "Consultar"
+        }
+    </script>
+</body>
+
+</html>
