@@ -2,7 +2,7 @@ Projeto Aza: Assistente Virtual Médica e Inteligente
 
 **Introdução**
 
-O Projeto Aza visa desenvolver um assistente virtual médico inteligente que utilize a API do Gemini para auxiliar usuários em suas consultas e dúvidas médicas do dia a dia. O objetivo é oferecer uma ferramenta acessível, informativa e confiável para que as pessoas possam cuidar da sua saúde de forma mais prática e eficiente.
+🩺 O Projeto Aza visa desenvolver um assistente virtual médico inteligente que utilize a API do Gemini para auxiliar usuários em suas consultas e dúvidas médicas do dia a dia. O objetivo é oferecer uma ferramenta acessível, informativa e confiável para que as pessoas possam cuidar da sua saúde de forma mais prática e eficiente.
 
 **Funcionalidades**
 
