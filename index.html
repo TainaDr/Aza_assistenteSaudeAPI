@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aza - Assistente de Saúde</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai/dist/gemini.umd.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/assistenteFavIcon.ico">
+</head>
+<body>
+    <div class="parallax" style="background-image: url('img/smart-female-student-looking-book-library.jpg');">
+        <h1 class="title">Assistente Literário Virtual</h1>
+    </div>
+
+    <p style="text-align: center;">Olá, eu sou a Aza! Sua Assistente Literário Virtual...</p>
+    <p style="text-align: center;">Experimente me fazer uma pergunta.</p>
+    <section id="sectionAsk">
+        <form id="assistantForm">
+            <input type="text" id="consulta" placeholder="Em que posso te ajudar hoje?">
+            <button type="button" id="botaoConsulta">Enviar</button>
+        </form>
+    </section>
+
+    <section id="resultadoConsulta">
+    </section>
+    <div id="Funcionalidades">
+        <h2>Ídeias de Prompts:</h2>
+        <p><b>📕</b> Aza me indique um livro de romance!</p>
+        <p><b>📗</b> Aza, me ajude a escolher meu livro das férias.</p>
+        <p><b>📔</b> Aza, o que você acha sobre a autora J.K Rowling?</p>
+    </div>
+    <hr>
+
+    <footer>
+        <p style="text-align: center;">Desenvolvido por Tainá Leandra Dreissig</p>
+        <div style="margin-left: 620px;" class="social-icons">
+            <a href="https://www.instagram.com/_tainadreissig/">
+                <img height="30px" width="30px" src="img/logotipo-do-instagram.png">
+            </a>
+            <a href="https://github.com/tainadr">
+                <img height="30px" width="30px" src="img/github.png">
+            </a>
+            <a href="https://www.linkedin.com/in/tain%C3%A1-dreissig-159593185/">
+                <img height="30px" width="30px" src="img/logotipo-do-linkedin.png">
+            </a>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #5d005d;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#sectionAsk {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+section {
+    background-color: #f4f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.554);
+    flex: 1;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+#assistent {
+    width: 300px;
+    height: 300px;
+    margin-left: 520px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f5d7f8;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+
+button {
+    background-color: #c75000;
+    color: #fff;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c59250;
+}
+
+section:last-child {
+    flex: 2;
+}
+
+
+p{
+    text-align: justify;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.social-icons i {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+hr{
+    margin: 40px;
+}
+
+.parallax {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px; 
+}
+
+.content {
+    height: 200px;
+    background-color: #f1f1f1;
+    font-size: 36px;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.parallax {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.Funcionalidades {
+    text-align: center;
+}
